@@ -13,7 +13,13 @@ make install
 
 if [ "$(uname)" == "Linux" ]; then
   # move to proper library directory
-  mv $PREFIX/lib64/* $PREFIX/lib/
+  if [ -d "$PREFIX/lib64" ]; then
+    nofiles=$(cat "$PREFIX/lib64" | wc -l)
+
+    if [ "$nofiles" != "0" ]; then
+      mv $PREFIX/lib64/* $PREFIX/lib/
+    fi
+  fi
 fi
 
 # remove static libs

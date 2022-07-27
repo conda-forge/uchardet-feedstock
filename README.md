@@ -155,4 +155,5 @@ Feedstock Maintainers
 =====================
 
 * [@scopatz](https://github.com/scopatz/)
+* [@cgr71ii](https://github.com/cgr71ii/)
 
