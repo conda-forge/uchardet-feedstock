@@ -11,11 +11,10 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: True  # [not linux64]
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make
@@ -25,9 +24,9 @@ test:
     - uchardet --version
 
 about:
-  home: https://www.freedesktop.org/wiki/Software/uchardet/
-  license: Mozilla Public v1.1
-  license_family: OTHER
+  home: https://github.com/freedesktop/uchardet/
+  license: MPL-1.1
+  license_family: MOZILLA
   license_file: COPYING
   summary: 'An encoding detector library that attempts to determine the encoding of the text'
   description: |
